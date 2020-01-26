@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Tress And Brush Background.png-a3c32f9876b39a3106ff5bf3dc34509e.stex"
+path="res://.import/Attack1.png-a88f64cf4ddac6d99788b9c68ba126fd.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Backgrouds/Tress And Brush Background.png"
-dest_files=[ "res://.import/Tress And Brush Background.png-a3c32f9876b39a3106ff5bf3dc34509e.stex" ]
+source_file="res://assets/Wizard Pack/Attack1.png"
+dest_files=[ "res://.import/Attack1.png-a88f64cf4ddac6d99788b9c68ba126fd.stex" ]
 
 [params]
 

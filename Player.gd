@@ -1,30 +1,30 @@
 extends KinematicBody2D
 
-const GRAVITY = 100
+const SPEED = 200
+const GRAVITY = 10
+const JUMP_POWER = -250
+
+onready var animation_player = $AnimationPlayer
+onready var player_sprite = $Minotaur
+
 var velocity = Vector2(0, 0)
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
-
 func _process(delta):
-	velocity = velocity.linear_interpolate(movePlayer(), delta * 1)
-	print(velocity)
-	velocity.y += GRAVITY
-#	velocity = Vector2(0, GRAVITY)
-#	movePlayer()
-	move_and_slide(velocity, Vector2.UP)
-	
-
-func movePlayer():
-	var dir = Vector2(0,0)
-	if Input.is_action_pressed("ui_left"):
-		dir.x = -100
 	if Input.is_action_pressed("ui_right"):
-		dir.x = 100
-	if Input.is_action_pressed("ui_up"):
-		dir.y -= (GRAVITY + 100)
-#	if is_on_floor():
-#		if Input.is_action_pressed("ui_up"):
-#			dir.y = -1000
-	return dir
+		velocity.x = SPEED
+		animation_player.play("Run")
+		player_sprite.flip_h = false
+	elif Input.is_action_pressed("ui_left"):
+		velocity.x = -SPEED
+		animation_player.play("Run")
+		player_sprite.flip_h = true
+	else:
+		velocity.x = 0
+		animation_player.play("Idle")
+		
+	if is_on_floor() and Input.is_action_just_pressed("ui_up"):
+		velocity.y = JUMP_POWER
+		
+	velocity.y += GRAVITY
+	
+	move_and_slide(velocity, Vector2.UP)
