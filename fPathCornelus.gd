@@ -14,7 +14,7 @@ func _process(delta):
 	
 	var diff = enemy.global_position[0] - enemy_x
 	enemy_x = enemy.global_position[0] 
-
+	print(diff > 0)
 	if diff > 0:
 		sprite.flip_h = false
 	else:
