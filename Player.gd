@@ -18,9 +18,17 @@ func _process(delta):
 		velocity.x = -SPEED
 		animation_player.play("Run")
 		player_sprite.flip_h = true
+	elif Input.is_action_pressed("Attack"):
+		animation_player.play("Attack")
+	elif Input.is_action_pressed("Special"):
+		animation_player.play("SpecialAttack")
 	else:
 		velocity.x = 0
 		animation_player.play("Idle")
+		
+	
+		
+	
 		
 	if is_on_floor() and Input.is_action_just_pressed("ui_up"):
 		velocity.y = JUMP_POWER
