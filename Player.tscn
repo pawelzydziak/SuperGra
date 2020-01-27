@@ -42,14 +42,15 @@ tracks/0/keys = {
 script = ExtResource( 1 )
 
 [node name="playerColl" type="CollisionShape2D" parent="."]
+position = Vector2( 25.6155, -0.903744 )
 shape = SubResource( 1 )
 
 [node name="playerView" type="Camera2D" parent="."]
-position = Vector2( 400, -200 )
+position = Vector2( 637.543, -214.153 )
 current = true
 
 [node name="Minotaur" type="Sprite" parent="."]
-position = Vector2( 2, 7 )
+position = Vector2( 28.9711, 4.96658 )
 texture = ExtResource( 2 )
 vframes = 20
 hframes = 9
