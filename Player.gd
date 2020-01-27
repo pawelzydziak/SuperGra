@@ -10,11 +10,11 @@ onready var player_sprite = $Minotaur
 var velocity = Vector2(0, 0)
 
 func _process(delta):
-	if Input.is_action_pressed("ui_right"):
+	if Input.is_action_pressed("MoveRight"):
 		velocity.x = SPEED
 		animation_player.play("Run")
 		player_sprite.flip_h = false
-	elif Input.is_action_pressed("ui_left"):
+	elif Input.is_action_pressed("MoveLeft"):
 		velocity.x = -SPEED
 		animation_player.play("Run")
 		player_sprite.flip_h = true
@@ -25,12 +25,8 @@ func _process(delta):
 	else:
 		velocity.x = 0
 		animation_player.play("Idle")
-		
-	
-		
-	
-		
-	if is_on_floor() and Input.is_action_just_pressed("ui_up"):
+
+	if is_on_floor() and Input.is_action_just_pressed("Jump"):
 		velocity.y = JUMP_POWER
 		
 	velocity.y += GRAVITY
