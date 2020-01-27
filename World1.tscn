@@ -82,6 +82,8 @@ curve = SubResource( 4 )
 
 [node name="fPathCornelus" type="PathFollow2D" parent="pathsEnemies"]
 position = Vector2( 909.306, 522.034 )
+z_as_relative = false
+rotate = false
 script = ExtResource( 5 )
 
 [node name="Zombie" parent="pathsEnemies/fPathCornelus" instance=ExtResource( 6 )]

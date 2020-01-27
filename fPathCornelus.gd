@@ -1,24 +1,23 @@
 extends PathFollow2D
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
 var enemyLocation = 0
 export var enemySpeed = 0.005
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
+onready var enemy = $Zombie
+onready var sprite = $Zombie/zombie_male
+onready var enemy_x = enemy.global_position[0]
+onready var enemy_start_x = enemy.global_position[0]
 
-	pass # Replace with function body.
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	set_unit_offset(enemyLocation)
-	print(offset)
-	if(enemyLocation):
-		get_node("Zombie/zombie_male").flip_h = true
+	
+	var diff = enemy.global_position[0] - enemy_x
+	enemy_x = enemy.global_position[0] 
+
+	if diff > 0:
+		sprite.flip_h = false
 	else:
-		get_node("Zombie/zombie_male").flip_h = false
-		
+		sprite.flip_h = true
+
 	enemyLocation += enemySpeed
-#	print(unit_offset)
