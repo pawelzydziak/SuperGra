@@ -1,10 +1,10 @@
 extends Actor
 
 func _physics_process(delta: float) -> void:
-	var is_jump_interrupted = Input.is_action_just_released("Jump") and velocity.y < 0.0
+	var is_jump_interrupted = Input.is_action_just_released("Jump") and _velocity.y < 0.0
 	var dir = get_dir()
-	velocity = calc_velocity(velocity, speed, dir, is_jump_interrupted)
-	velocity = move_and_slide(velocity, FLOOR_NORMAL)
+	_velocity = calc_velocity(_velocity, speed, dir, is_jump_interrupted)
+	_velocity = move_and_slide(_velocity, FLOOR_NORMAL)
 	
 func get_dir() -> Vector2:
 	return  Vector2(
