@@ -8,6 +8,7 @@ func _on_KillerDet_body_entered(body: PhysicsBody2D) -> void:
 	#nizej niz detektor
 	if body.global_position.y > get_node("KillerDet").global_position.y:
 		return
+		get_node("CollisionShape2D").disabled = true
 	queue_free()
 
 func _physics_process(delta: float) -> void:
