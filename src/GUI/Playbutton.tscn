@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://src/GUI/Playbutton.gd" type="Script" id=1]
+
+[node name="Button" type="Button"]
+margin_top = 88.0
+margin_right = 146.0
+margin_bottom = 172.0
+size_flags_vertical = 3
+text = "Play"
+script = ExtResource( 1 )
+next_scene_path = "res://src/Levels/Level1.tscn"
+[connection signal="button_up" from="." to="." method="_on_Button_button_up"]

@@ -85,7 +85,7 @@ position = Vector2( 1381, 495 )
 speed = Vector2( 100, 700 )
 
 [node name="magicTeleport" parent="." instance=ExtResource( 6 )]
-position = Vector2( 1950, 527 )
+position = Vector2( 1946, 514 )
 next_scene = ExtResource( 7 )
 
 [node name="Coin" parent="." instance=ExtResource( 8 )]

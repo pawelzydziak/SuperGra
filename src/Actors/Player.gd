@@ -1,12 +1,14 @@
 extends Actor
 
 export var stomp_impulse = 600.0
+export(String, FILE) var nextScene = ""
 
 func _on_EnemyDet_area_entered(area: Area2D) -> void:
 	_velocity = calc_stomp_velocity(_velocity, stomp_impulse)
 
 func _on_EnemyDet_body_entered(body: PhysicsBody2D) -> void:
 	queue_free()
+	get_tree().change_scene(nextScene)
 
 func _physics_process(delta: float) -> void:
 	var is_jump_interrupted = Input.is_action_just_released("Jump") and _velocity.y < 0.0
