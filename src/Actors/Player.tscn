@@ -27,6 +27,7 @@ position = Vector2( 1, -201 )
 current = true
 limit_left = 0
 limit_top = 0
+limit_right = 1972
 limit_smoothed = true
 smoothing_enabled = true
 drag_margin_left = 0.0
