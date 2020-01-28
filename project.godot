@@ -24,6 +24,10 @@ config/name="pierwszaGraP"
 run/main_scene="res://src/Screens/MainScene.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+PlayerVars="*res://src/Autoload/PlayerVars.gd"
+
 [input]
 
 MoveRight={
