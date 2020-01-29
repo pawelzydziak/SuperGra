@@ -28,6 +28,10 @@ config/icon="res://icon.png"
 
 PlayerVars="*res://src/Autoload/PlayerVars.gd"
 
+[display]
+
+window/size/resizable=false
+
 [input]
 
 MoveRight={
