@@ -1,14 +1,14 @@
 [gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://src/Actors/Player.gd" type="Script" id=1]
-[ext_resource path="res://assets/player.png" type="Texture" id=2]
+[ext_resource path="res://assets/pawel.png" type="Texture" id=2]
 [ext_resource path="res://assets/backgroud_music.ogg" type="AudioStream" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 16, 24 )
+extents = Vector2( 29, 44 )
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 17, 24 )
+extents = Vector2( 32, 41 )
 
 [node name="Player" type="KinematicBody2D"]
 collision_mask = 8
@@ -16,12 +16,13 @@ script = ExtResource( 1 )
 nextScene = "res://src/Screens/Finish.tscn"
 
 [node name="player" type="Sprite" parent="."]
-position = Vector2( 0.999999, -37 )
-scale = Vector2( 1.35751, 1.4865 )
+position = Vector2( 0, -44 )
+rotation = -0.0155445
+scale = Vector2( 0.0754258, 0.0792401 )
 texture = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 1, -25 )
+position = Vector2( 0, -47 )
 shape = SubResource( 1 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -42,7 +43,7 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="EnemyDet"]
 modulate = Color( 0, 0.298039, 1, 1 )
-position = Vector2( 1, -23 )
+position = Vector2( 1, -41 )
 shape = SubResource( 2 )
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
