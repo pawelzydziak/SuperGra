@@ -20,7 +20,7 @@ _global_script_class_icons={
 
 [application]
 
-config/name="pierwszaGraP"
+config/name="Paweu Adventures"
 run/main_scene="res://src/Screens/MainScene.tscn"
 config/icon="res://icon.png"
 
